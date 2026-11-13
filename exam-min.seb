@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- The smallest config SEB can be asked to start from. If this fails with the
+	     same ServerOperation NullReferenceException, the problem is not any key we
+	     chose: SEB 3.10.3 on this machine refuses hand-written XML configs full stop,
+	     and the config has to come out of the Config Tool instead. -->
+	<key>startURL</key>
+	<string>https://example.com</string>
+	<key>allowQuit</key>
+	<true/>
+	<key>hashedAdminPassword</key>
+	<string>9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08</string>
+	<key>kioskMode</key>
+	<false/>
+</dict>
+</plist>
