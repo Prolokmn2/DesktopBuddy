@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Maximum lockdown, for testing the buddy against a hostile exam browser.
+	     Both password hashes are SHA256("test"), Base16, as SEB expects:
+	     quit/unlock password: test      config (admin) password: test
+	     Nothing here is encrypted; SEB loads an unencrypted XML plist directly. -->
+	<key>originatorVersion</key>
+	<string>SEB_Win_3.7.0</string>
+	<key>sebMode</key>
+	<integer>1</integer>
+	<key>startURL</key>
+	<string>https://example.com</string>
+
+	<!-- Kiosk: own desktop, no Explorer shell, one display, nothing else running. -->
+	<key>kioskMode</key>
+	<true/>
+	<key>createNewDesktop</key>
+	<true/>
+	<key>killExplorerShell</key>
+	<true/>
+	<key>showTaskBar</key>
+	<false/>
+	<key>showSideMenu</key>
+	<false/>
+	<key>allowSwitchToApplications</key>
+	<false/>
+	<key>allowUserSwitching</key>
+	<false/>
+	<key>allowDisplayMirroring</key>
+	<false/>
+	<key>allowedDisplaysMaxNumber</key>
+	<integer>1</integer>
+	<key>allowedDisplayBuiltin</key>
+	<true/>
+	<key>allowScreenSharing</key>
+	<false/>
+	<key>allowVirtualMachine</key>
+	<false/>
+	<key>allowWlan</key>
+	<false/>
+	<key>enableWindowsUpdate</key>
+	<false/>
+
+	<!-- Quitting: no button, no menu, and an unguessable-by-accident password. -->
+	<key>allowQuit</key>
+	<false/>
+	<key>hashedQuitPassword</key>
+	<string>9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08</string>
+	<key>hashedAdminPassword</key>
+	<string>9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08</string>
+	<key>allowPreferencesWindow</key>
+	<false/>
+
+	<!-- Browser: no reload, no history, no toolbar, no spell check, no media capture. -->
+	<key>browserViewMode</key>
+	<integer>1</integer>
+	<key>browserWindowAllowReload</key>
+	<false/>
+	<key>allowBrowsingBackForward</key>
+	<false/>
+	<key>allowSpellCheck</key>
+	<false/>
+	<key>enableZoomPage</key>
+	<false/>
+	<key>blockPopUpWindows</key>
+	<true/>
+	<key>allowVideoCapture</key>
+	<false/>
+	<key>allowAudioCapture</key>
+	<false/>
+	<key>mainBrowserWindowWidth</key>
+	<string>100%</string>
+	<key>mainBrowserWindowHeight</key>
+	<string>100%</string>
+	<key>mainBrowserWindowPositioning</key>
+	<integer>1</integer>
+
+	<!-- Session: clean start, no keys sent to the exam system. -->
+	<key>examSessionClearCookiesOnStart</key>
+	<true/>
+	<key>sendBrowserExamKey</key>
+	<false/>
+	<key>logLevel</key>
+	<integer>2</integer>
+
+	<!-- URL filtering is off on purpose: an empty rule set blocks the exam page
+	     itself. To lock browsing down, set URLFilterEnable to true and add rules to
+	     URLFilterRules for the exam host. -->
+	<key>URLFilterEnable</key>
+	<false/>
+	<key>URLFilterEnableContentFilter</key>
+	<false/>
+	<key>blacklistURLFilter</key>
+	<string></string>
+</dict>
+</plist>
