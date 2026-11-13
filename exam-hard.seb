@@ -13,6 +13,17 @@
 	<key>startURL</key>
 	<string>https://example.com</string>
 
+	<!-- No exam server. Leftover client settings on a machine easily carry a server
+	     URL with no API endpoint, and SEB 3.7 then dies in ServerProxy.Initialize with
+	     a NullReferenceException before the session even starts. Stating the empty
+	     value here overrides whatever was inherited. -->
+	<key>sebServerURL</key>
+	<string></string>
+	<key>sebServerFallback</key>
+	<false/>
+	<key>sebServerDiscovery</key>
+	<false/>
+
 	<!-- Kiosk: own desktop, no Explorer shell, one display, nothing else running. -->
 	<key>kioskMode</key>
 	<true/>

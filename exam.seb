@@ -13,6 +13,15 @@
 	<key>sebMode</key>
 	<integer>1</integer>
 
+	<!-- No exam server: an inherited server URL without an API endpoint makes SEB 3.7
+	     fail session start in ServerProxy.Initialize. -->
+	<key>sebServerURL</key>
+	<string></string>
+	<key>sebServerFallback</key>
+	<false/>
+	<key>sebServerDiscovery</key>
+	<false/>
+
 	<key>hashedAdminPassword</key>
 	<string>9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08</string>
 	<key>hashedQuitPassword</key>
