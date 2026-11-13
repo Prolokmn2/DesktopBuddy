@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Passwords are never stored in a .seb file, only their SHA-256 hash as
+	     Base16 (lower case). The hashes below are SHA256("test"), so the password
+	     to open this config for editing and to quit SEB is: test -->
+	<key>originatorVersion</key>
+	<string>SEB_Win_3.7.0</string>
+
+	<key>startURL</key>
+	<string>https://example.com</string>
+	<key>sebMode</key>
+	<integer>1</integer>
+
+	<key>hashedAdminPassword</key>
+	<string>9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08</string>
+	<key>hashedQuitPassword</key>
+	<string>9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08</string>
+	<key>allowQuit</key>
+	<true/>
+
+	<key>allowPreferencesWindow</key>
+	<false/>
+	<key>allowSwitchToApplications</key>
+	<false/>
+	<key>allowVirtualMachine</key>
+	<false/>
+
+	<key>browserViewMode</key>
+	<integer>1</integer>
+	<key>kioskMode</key>
+	<false/>
+	<key>showTaskBar</key>
+	<true/>
+	<key>browserWindowAllowReload</key>
+	<true/>
+	<key>enableZoomPage</key>
+	<true/>
+	<key>allowSpellCheck</key>
+	<true/>
+
+	<key>examSessionClearCookiesOnStart</key>
+	<false/>
+	<key>sendBrowserExamKey</key>
+	<false/>
+</dict>
+</plist>
